@@ -51,18 +51,3 @@ def extract_min(heap: MinHeap) -> tuple[MinHeap, int]:
     new_heap = heapify_down(MinHeap(heap.data[1:]), 0)
 
     return new_heap, min
-    '''
-    min_element = heap.data[0]
-    new_heap_data = heap.data[:]
-    last_index = len(new_heap_data) - 1
-    new_heap_data[0] = new_heap_data[last_index]
-    new_heap_data = new_heap_data[:last_index]
-    new_heap = heapify_down(MinHeap(new_heap_data), 0)
-    return new_heap, min_element
-    '''
-heap = MinHeap([1, 3, 5, 10, 4])
-heap, min_element = extract_min(heap)
-print(heap.data)
-print("\n")
-print(min_element)
-
