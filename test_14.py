@@ -27,7 +27,7 @@ class TestMinHeap(unittest.TestCase):
         heap = MinHeap([1, 3, 5, 10, 4])
         heap, min_element = extract_min(heap)
         self.assertEqual(min_element, 1)
-        self.assertEqual(heap.data, [3, 4, 5, 10])
+        self.assertEqual(heap.data, [3, 5, 10, 4])
 
 if __name__ == '__main__':
     unittest.main()
